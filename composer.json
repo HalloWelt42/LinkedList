@@ -1,0 +1,8 @@
+{
+  "name": "hallowelt42/listoperation",
+  "autoload": {
+    "psr-4": {
+      "ListOperation\\": "src/"
+    }
+  }
+}
