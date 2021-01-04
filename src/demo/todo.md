@@ -1,3 +1,6 @@
 # DOTOs
 
-* Dependency Injection-Container implementieren
+implementieren:
+* Dependency Injection Container 
+* ListConstructor
+* List Controller für Operationen 
