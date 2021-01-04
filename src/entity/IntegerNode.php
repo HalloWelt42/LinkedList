@@ -4,7 +4,6 @@
 namespace ListOperation\entity;
 
 
-
 use ListOperation\entity\interfaces\INode;
 
 class IntegerNode implements INode
@@ -12,10 +11,10 @@ class IntegerNode implements INode
     private int              $number;
     private IntegerNode|null $child;
 
-    public function __construct( int $number, $child = null )
+    public function __construct( int $number = 0, $child = null )
     {
-        $this -> number = $number;
-        $this -> child  = $child;
+        $this -> setData( $number );
+        $this -> setChild( $child );
     }
 
     public function getData():int
@@ -23,9 +22,21 @@ class IntegerNode implements INode
         return $this -> number;
     }
 
-    public function getChild():?IntegerNode
+    public function getChild():?INode
     {
         return $this -> child;
+    }
+
+    public function setChild( ?INode $node ):self
+    {
+        $this -> child = $node;
+        return $this;
+    }
+
+    public function setData( $value ):self
+    {
+        $this -> number = $value;
+        return $this;
     }
 
 }

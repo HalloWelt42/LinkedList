@@ -6,6 +6,7 @@ namespace ListOperation\demo;
 
 
 use ListOperation\controller\Display;
+use ListOperation\controller\LinkedListInteger;
 use ListOperation\entity\IntegerNode;
 
 class Main
@@ -17,6 +18,7 @@ class Main
     {
         $this->draw_object = '';
         $this->constuctList();
+        $this->add_items();
         $this->displayList();
     }
 
@@ -24,6 +26,11 @@ class Main
     {
         $this->linked_list = new IntegerNode(1,new IntegerNode(4,new IntegerNode(6)));
 
+    }
+
+    public function add_items(){
+        $ll = new LinkedListInteger($this->linked_list);
+        $ll->insertAtLast(5);
     }
 
     private function displayList()
