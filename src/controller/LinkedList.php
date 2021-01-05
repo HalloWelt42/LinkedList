@@ -18,7 +18,6 @@ class LinkedList
         $this -> linked_list = $linked_list;
     }
 
-
     public function insertAtLast( string $data )
     {
         $this->node = $this->linked_list;
@@ -33,14 +32,12 @@ class LinkedList
 
     }
 
-
     public function interAtFirst( string $data ):self{
         $node = new Node($data );
         $node->setChild($this->linked_list);
         $this->linked_list = $node;
         return $this;
     }
-
 
     public function get():?Node{
         return $this->linked_list;
