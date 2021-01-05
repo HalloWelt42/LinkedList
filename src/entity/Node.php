@@ -6,20 +6,20 @@ namespace ListOperation\entity;
 
 use ListOperation\entity\interfaces\INode;
 
-class IntegerNode implements INode
+class Node implements INode
 {
-    private int              $number;
-    private IntegerNode|null $child;
+    private string    $data;
+    private Node|null $child;
 
-    public function __construct( int $number = 0, $child = null )
+    public function __construct( string $data = '', $child = null )
     {
-        $this -> setData( $number );
+        $this -> setData( $data );
         $this -> setChild( $child );
     }
 
     public function getData():int
     {
-        return $this -> number;
+        return $this -> data;
     }
 
     public function getChild():?INode
@@ -33,9 +33,9 @@ class IntegerNode implements INode
         return $this;
     }
 
-    public function setData( $value ):self
+    public function setData( string $value ):self
     {
-        $this -> number = $value;
+        $this -> data = $value;
         return $this;
     }
 

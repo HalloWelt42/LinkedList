@@ -6,11 +6,11 @@ namespace ListOperation\entity\interfaces;
 
 interface INode
 {
-    public function getData():int|string;
+    public function getData();
 
-    public function getChild():?INode;
+    public function getChild();
 
-    public function setChild( ?INode $node ):self;
+    public function setChild( ?INode $node );
 
-    public function setData( int|string $value ):self;
+    public function setData( string $value );
 }
